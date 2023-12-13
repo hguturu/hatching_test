@@ -10,9 +10,12 @@ build-backend = "hatchling.build"
 "lib/fonts/FooSans" = "src/foo/FooSans"
 "lib/stylelib" = "src/foo/stylelib"
 
-[tool.hatch.build]
+[tool.hatch.build.targets.wheel]
 packages = ["src/foo"]
 
+# needed so that `pip install .` force includes
+# but this breaks `sdist` above. if this line is removed
+# things work, but then `pip install .` doesn't work
 [tool.hatch.build.targets.wheel.force-include]
 "lib/fonts/FooSans" = "src/foo/FooSans"
 "lib/stylelib" = "src/foo/stylelib"
