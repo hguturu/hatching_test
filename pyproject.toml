@@ -7,14 +7,14 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist.force-include]
-"lib/fonts/FooSans" = "src/foo/SeerSans"
+"lib/fonts/FooSans" = "src/foo/FooSans"
 "lib/stylelib" = "src/foo/stylelib"
 
 [tool.hatch.build]
 packages = ["src/foo"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"lib/fonts/SeerSans" = "src/foo/SeerSans"
+"lib/fonts/FooSans" = "src/foo/FooSans"
 "lib/stylelib" = "src/foo/stylelib"
 
 [tool.setuptools_scm]
