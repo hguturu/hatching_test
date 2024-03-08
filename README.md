@@ -31,4 +31,11 @@ FooSans  stylelib
 # if workaround of removing the follow is used, then the `pip install .` doesn't work anymore
 [tool.hatch.build.targets.wheel.force-include]
 "external/stylelib" = "src/foo/stylelib"
+
+pip install .
+> python -m footest
+# importing footest
+> ls ~/miniconda3/lib/python3.10/site-packages/footest
+__init__.py  __pycache__
+# the force included folders are missing
 ```
