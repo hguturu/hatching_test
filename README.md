@@ -2,7 +2,7 @@
 https://github.com/pypa/hatch/issues/1130
 
 # Instructions to recreate issue
-```console
+```sh
 git clone git@github.com:hguturu/hatching_test.git
 
 cd hatching_test
