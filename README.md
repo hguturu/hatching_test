@@ -7,5 +7,8 @@ git clone git@github.com:hguturu/hatching_test.git
 
 cd hatching_test
 
-tox # to re-create the issue
+# to re-create the issue
+tox 
+# or
+pip install . 
 ```
