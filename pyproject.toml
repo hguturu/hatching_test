@@ -3,6 +3,7 @@ name = "footest"
 version = "1.0"
 
 [build-system]
+# Changing to "hatchling<1.19" creates eliminates the problem
 requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
