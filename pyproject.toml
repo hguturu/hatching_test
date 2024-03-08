@@ -1,5 +1,5 @@
 [project]
-name = "foo"
+name = "footest"
 version = "1.0"
 
 [build-system]
@@ -7,18 +7,18 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.sdist.force-include]
-"lib/fonts/FooSans" = "src/foo/FooSans"
-"lib/stylelib" = "src/foo/stylelib"
+"lib/fonts/FooSans" = "src/footest/FooSans"
+"lib/stylelib" = "src/footest/stylelib"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/foo"]
+packages = ["src/footest"]
 
 # needed so that `pip install .` force includes
 # but this breaks `sdist` above. if this line is removed
 # things work, but then `pip install .` doesn't work
 [tool.hatch.build.targets.wheel.force-include]
-"lib/fonts/FooSans" = "src/foo/FooSans"
-"lib/stylelib" = "src/foo/stylelib"
+"lib/fonts/FooSans" = "src/footest/FooSans"
+"lib/stylelib" = "src/footest/stylelib"
 
 [tool.setuptools_scm]
 [tool.tox]
