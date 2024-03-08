@@ -28,4 +28,7 @@ pip install -e .
 > ls ~/miniconda3/lib/python3.10/site-packages/footest
 FooSans  stylelib
 
+# if workaround of removing the follow is used, then the `pip install .` doesn't work anymore
+[tool.hatch.build.targets.wheel.force-include]
+"external/stylelib" = "src/foo/stylelib"
 ```
