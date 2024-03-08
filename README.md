@@ -8,7 +8,24 @@ git clone git@github.com:hguturu/hatching_test.git
 cd hatching_test
 
 # to re-create the issue
-tox 
-# or
-pip install . 
+tox
+
+# issue caused due to tox installing from sdist, to recreate directly
+python -m build . --sdist
+pip install dist/footest-1.0.tar.gz
+
+# the  following works
+pip install .
+> python -m footest
+# importing footest
+> ls ~/miniconda3/lib/python3.10/site-packages/footest
+FooSans  __init__.py  __pycache__  stylelib
+
+# the following works (dev install)
+pip install -e .
+> python -m footest
+# importing footest
+> ls ~/miniconda3/lib/python3.10/site-packages/footest
+FooSans  stylelib
+
 ```
