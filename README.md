@@ -1,5 +1,5 @@
 # Test Repo to Recreate force-include issue in Hatchling v1.19.0+
-https://github.com/pypa/hatch/issues/1130
+https://github.com/pypa/hatch/issues/1130 and https://github.com/pypa/hatch/issues/1305
 
 # Instructions to recreate issue
 ```sh
